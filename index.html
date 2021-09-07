@@ -7,35 +7,189 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Dancing+Script&display=swap" rel="stylesheet">
+    <title>Online Orbituary</title>
+  <link rel="stylesheet" href="css/customstyle.css">
 
-    <title>Hello, world!</title>
+  <style>
+    #slide,#map,#lf{
+      display: none;
+    }
+  </style>
   </head>
   <body>
-      <div class="row">
-          <div class="col-md-12">
-        <h1>Hello, world!zxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</h1>
-
-          </div>
-          <div class="col-md-6">
-        <h1>Hello, world!vccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc</h1>
-
-          </div>
-          <div class="col-md-6">
-            <h1>Hello, worldsdeweeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee!</h1>
-
-          </div>
-    
+    <header>
+      <!-- Opening Navigation-->
+      <nav class="navbar fixed-top navbar-expand-md  scrolling-navbar">
+        <button class="navbar-toggler" type="button" data-bs-target="collapse" data-bs-target="#navcontents" aria-controls="navcontents" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navcontents">
+          <ul class="navbar-nav text-white mr-auto">
+            <li class="nav-item">
+              <a class="nav-link custText active" aria-current="page" id="home" href="#slide">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custText" id="prg" href="#program">Program/Orbituary</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custText" id="venue" href="#map">Venue</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custText" id="feed" href="#lf">Live Feed</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="clearfix"> </div>
+      <div class="clearfix"> </div>
+      <div class="clearfix"> </div>
+      <!-- Closing Navigation-->
+    </header>
+    <!--Opening the jumbotron-->
+    <div id="slide" class="jumbotron jumbotron-fluid">
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAISZoG6bbH0L5aiZRIYX-Nbha8c5JZZKA&callback=initMap"></script>
+    <div id="carouselExampleCaptions" class="carousel slide bg-dark text-white" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
       </div>
-    
-    <!-- Optional JavaScript; choose one of the two! -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="http://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/img/car_1.png" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>First slide label</h5>
+            <p>Some representative placeholder content for the first slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="http://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/img/tree_4.png" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="http://codeskulptor-demos.commondatastorage.googleapis.com/descent/person.png" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Third slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </div>
 
+        <div class="carousel-item">
+          <img src="http://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/img/start.png" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Forth slide label</h5>
+            <p>Some representative placeholder content for the forth slide.</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="http://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/img/backdrop.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Fifth slide label</h5>
+            <p>Some representative placeholder content for the fifth slide.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+   </div>
+   <!--Closing the jumbotron-->
+   
+
+   <!--Opening Program DIv -->
+<div id="program">
+<br><br><br><br>
+
+<div class="row ">
+  
+  <div class="col-md-6 bg-dark text-white prgg bg-img">
+    <form>
+      <fieldset>
+        <legend>Program</legend>
+      <br>
+      <div class="box">
+      <label for="">1. Opening prayer </label><br><br>
+      <label for="">2. Welcome and Remarks</label><br><br>
+      <label for="">3. Hymn</label><br><br>
+      <label for="">4. Scripture Reading</label><br><br>
+      <label for="">5. Tribute by Friends</label><br><br>
+      <label for="">6. Tribute by Family</label><br><br>
+      <label for="">7. Instructions</label><br><br>
+      <label for="">9. Closing prayer</label><br><br>
+    </div>
+
+    <div class="box">
+      <label for="">Name </label><br><br>
+      <label for="">Name </label><br><br>
+      <label for="">Name </label><br><br>
+      <label for="">Name </label><br><br>
+      <label for="">Name </label><br><br>
+      <label for="">Name </label><br><br>
+      <label for="">Name </label><br><br>
+      <label for="">Name </label><br><br>
+     
+    </div>
+    </form>
+  </div>
+  <div class="col-md-6 bg-dark text-light obit">
+    
+    <form >
+      <fieldset>
+        <legend>Obituary</legend>
+        <p>zsxdcfgvbhnmrdtfyguhkcgv hbhknmkfcgfvhk</p>
+      </fieldset>
+    </form>
+  </div>
+</div>
+
+</div>
+   <!--Closing Program DIv -->
+  
+   <!--Opening Feed DIv -->
+
+   <div id="lf">
+     <h1>Life Feeeeed</h1>
+   </div>
+   <!--Closing Feed DIv -->
+
+
+
+   <!--Opening Location DIv -->
+
+  
+   <div id="map">
+    <h1>Map</h1>
+   </div>
+   <!--Closing Location DIv -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAISZoG6bbH0L5aiZRIYX-Nbha8c5JZZKA&map_ids=a7ca9a4d25576fd&callback=initMap"></script>
+
+    <!-- Optional JavaScript; choose one of the two! -->
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
+    
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
-    -->
+   <script src="js/bootstrap.js"></script>
+   <script src="/js/mapapi.js"></script>
   </body>
 </html>
